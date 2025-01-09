@@ -1,15 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  template: `
-    <h1>Welcome to {{title}}!</h1>
-
-    <router-outlet />
-  `,
+  selector: "app-root",
+  template: ` <app-counter></app-counter> <router-outlet /> `,
   standalone: false,
-  styles: []
+  styles: [],
 })
 export class AppComponent {
-  title = 'ngrx-demo';
+  title = "ngrx-demo";
 }
