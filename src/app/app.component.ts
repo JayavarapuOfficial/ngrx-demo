@@ -2,7 +2,12 @@ import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  template: ` <app-counter></app-counter> <router-outlet /> `,
+  template: `
+    <app-top-nav></app-top-nav>
+    <div class="container">
+      <router-outlet />
+    </div>
+  `,
   standalone: false,
   styles: [],
 })

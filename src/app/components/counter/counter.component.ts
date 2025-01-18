@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { Observable } from "rxjs";
+import { MatButton } from "@angular/material/button";
 import {
   decrementAction,
   incrementAction,
@@ -11,10 +11,23 @@ import {
   selector: "app-counter",
   standalone: false,
 
-  template: ` Hello {{ counterDisplay }}
-    <button (click)="handleIncrement()">+</button
-    ><button (click)="handleDecrementI()" )>-</button>`,
-  styles: ``,
+  template: ` Counter display Value: {{ counterDisplay }}
+    <br />
+
+    <button mat-raised-button color="primary" (click)="handleIncrement()">
+      Increment(+)
+    </button>
+    <button mat-raised-button color="accent" (click)="handleReset()">
+      Reset
+    </button>
+
+    <button (click)="handleDecrementI()" mat-raised-button color="warn">
+      Decrement(-)
+    </button>`,
+  styles: `
+  button{
+    margin:2px;
+  }`,
 })
 export class CounterComponent implements OnInit {
   counterDisplay!: number;
